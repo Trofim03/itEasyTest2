@@ -35,3 +35,36 @@
     ├── index.html
     ├── style.css
     └── app.js
+    
+## Запуск
+
+### Backend
+
+```bash
+cd server
+npm install
+npm start
+```
+
+Сервер поднимется на `http://127.0.0.1:8000`.
+
+### Frontend
+
+Открыть `frontend/index.html` в браузере (или через Live Server в VS Code).
+
+### Проверка
+
+```bash
+curl.exe http://127.0.0.1:8000/api/campaigns
+```
+
+### Полная цепочка (одним блоком)
+
+```bash
+cd server
+npm install
+npm start
+# в другом терминале:
+curl.exe http://127.0.0.1:8000/api/campaigns
+# открыть frontend/index.html
+```
