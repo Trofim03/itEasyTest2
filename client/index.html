@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keitaro Campaign Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Keitaro Manager</h1>
+    </header>
+
+    <main>
+        <!-- Секция 1: Создание кампании -->
+        <section class="card" id="create-section">
+            <h2>Создать кампанию</h2>
+            <form id="create-form">
+                <div class="form-group">
+                    <label for="campaign-name">Название кампании</label>
+                    <input type="text" id="campaign-name" required placeholder="Например: DE_Google_Test">
+                </div>
+                <div class="form-group">
+                    <label for="geo-code">Гео (код страны)</label>
+                    <input type="text" id="geo-code" required placeholder="DE" maxlength="2" style="text-transform: uppercase;">
+                </div>
+                <div class="form-group">
+                    <label for="offer-id">ID оффера</label>
+                    <input type="number" id="offer-id" required placeholder="123">
+                </div>
+                <button type="submit" class="btn primary">Создать</button>
+            </form>
+            <div id="create-status" class="status"></div>
+        </section>
+
+        <!-- Секция 2: Редактор кампаний -->
+        <section class="card" id="editor-section">
+            <h2>Редактор потоков</h2>
+            
+            <div class="form-group">
+                <label for="campaign-select">Выберите кампанию</label>
+                <select id="campaign-select">
+                    <option value="">-- Загрузка... --</option>
+                </select>
+                <button id="refresh-campaigns" class="btn small">Обновить список</button>
+            </div>
+
+            <div id="streams-container">
+                <p class="placeholder">Выберите кампанию, чтобы увидеть потоки.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
